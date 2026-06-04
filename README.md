@@ -1,9 +1,27 @@
 # Sudoku
 
-A simple Sudoku game with a desktop GUI, written in pure Python using
-`tkinter` (no third-party dependencies).
+A simple Sudoku game, available two ways:
+
+- **Web app** — play in any browser (`index.html`, deployable to Vercel)
+- **Desktop app** — pure Python using `tkinter` (`sudoku.py`, no third-party deps)
+
+Both share the same logic: a random generator with **Easy / Medium / Hard**
+difficulty, every puzzle guaranteed to have exactly one solution.
 
 ![grid](https://img.shields.io/badge/python-3.8%2B-blue)
+
+## Play on the web
+
+The web version is a static site (plain HTML/CSS/JS — no build step).
+
+Locally, just open `index.html` in a browser, or serve the folder:
+
+```bash
+npx serve .
+```
+
+It deploys to [Vercel](https://vercel.com) as-is (framework preset: **Other**,
+no build command, output directory `.`).
 
 ## Features
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku</title>
+  <meta name="description" content="Play Sudoku in your browser — Easy, Medium and Hard puzzles, each with exactly one solution." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Sudoku</h1>
+
+    <div class="controls">
+      <label class="field">
+        Difficulty
+        <select id="difficulty">
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </label>
+      <button id="new-game" class="btn primary">New Game</button>
+      <button id="check" class="btn">Check</button>
+      <button id="solve" class="btn">Solve</button>
+    </div>
+
+    <div id="grid" class="grid" aria-label="Sudoku grid"></div>
+
+    <p id="status" class="status" role="status" aria-live="polite">
+      Loading a puzzle&hellip;
+    </p>
+
+    <div class="pad" id="pad" aria-label="Number pad"></div>
+
+    <footer>
+      Click a cell, then type <kbd>1</kbd>&ndash;<kbd>9</kbd> (or use the buttons).
+      Press <kbd>0</kbd>, <kbd>Backspace</kbd> or <kbd>Delete</kbd> to clear.
+    </footer>
+  </main>
+
+  <script src="./sudoku.js"></script>
+</body>
+</html>
